@@ -5,16 +5,28 @@
 }
 
 #to-do-input{
+    background: rgba(255, 255, 255, 0.60);
+    backdrop-filter: blur(3px);
     padding : 12px 75px 12px 12px;
     border-radius : 15px 0px 0px 15px;
     border : none;
     outline: none;
 }
 
+#to-do-input::placeholder {
+    color: black; /* Same solid color as your title */
+    opacity: 0.7;     /* Removes the default browser transparency */
+}
+
 .Top-text{
+    color: #FFF8E7;
+    font-weight: 700;
+    letter-spacing: -1px; /* Tighter spacing looks more modern/editorial */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5), 
+                 0px 0px 20px rgba(0, 0, 0, 0.3);
     display : flex;
     gap : 15px;
-    margin-left: 35px;
+    margin-left: 40px;
 }
 
 .search-bar{
@@ -23,14 +35,14 @@
 
 #search-bar-button{
     position : absolute;
-    left : 720px;
+    left : 350px;
     padding: 12px;
     padding-left : 15px;
     padding-right : 15px;
     border-radius: 15px;
     border : none;
     cursor : pointer;
-    background-color: #ff5e57; /* Let's try the vibrant coral! */
+    background-color: rgba(224, 122, 95, 1); /* Let's try the vibrant coral! */
     color: white;
 
 }
@@ -49,37 +61,48 @@
 }
 
 .Task-text{
+    color: #E0E0E0; 
+    font-weight: 600;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
     margin-left: 10px;
-    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;            /* Standard readable size for list items */
+    letter-spacing: 0.5px;      /* Slight spacing makes it look cleaner */
+
 }
 
 #complete-text{
-    color : #555;
+    color : black;
     text-decoration: line-through;
 }
 
 .container{
     margin-bottom: 350px;
-    background-color: rgba(30, 41, 59, 0.7); 
-    background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
     color: white; 
-    /* A bright blue shadow to make it "glow" */
-    box-shadow: 0 15px 35px rgba(0, 210, 255, 0.3);
     border: none;
     border-radius : 20px;
-    padding : 0px 180px 100px 150px;
+    padding : 0px 140px 100px 120px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(3px);
 }
 
 body {
   margin: 0;
   min-height: 100vh;
+
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* Deep Blue to Darker Navy */
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  padding-top: 50px;
+
   font-family: 'Segoe UI', sans-serif;
   color : white;
+
+  background-image: url("pexels-rok-romih-1746122-3848158.jpg");
+  background-size: cover;      /* Makes image fill entire screen */
+  background-position: center; /* Keeps image centered */
+  background-repeat: no-repeat;/* Prevents repeating */
+
+  background-attachment: fixed;
 }
 
 .task-container{
